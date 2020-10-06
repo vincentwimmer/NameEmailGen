@@ -8,28 +8,28 @@ domain = "@email.com"
 email = ""
 
 firstname = []
-firstname_txt = open('C:/Users/vwimmer/Documents/Git/Tests/firstnames.txt', 'r')
+firstname_txt = open('firstnames.txt', 'r')
 for firstnames in firstname_txt:
 	firstnames = firstnames.strip('\n')
 	firstname.append(firstnames)
 firstname_txt.close()
 
 lastname = []
-lastname_txt = open('C:/Users/vwimmer/Documents/Git/Tests/lastnames.txt', 'r')
+lastname_txt = open('lastnames.txt', 'r')
 for lastnames in lastname_txt:
 	lastnames = lastnames.strip('\n')
 	lastname.append(lastnames)
 lastname_txt.close()
 
 adjective = []
-adjective_txt = open('C:/Users/vwimmer/Documents/Git/Tests/adjectives.txt', 'r')
+adjective_txt = open('adjectives.txt', 'r')
 for adjectives in adjective_txt:
 	adjectives = adjectives.strip('\n')
 	adjective.append(adjectives)
 adjective_txt.close()
 
 noun = []
-noun_txt = open('C:/Users/vwimmer/Documents/Git/Tests/nouns.txt', 'r')
+noun_txt = open('nouns.txt', 'r')
 for nouns in noun_txt:
 	nouns = nouns.strip('\n')
 	noun.append(nouns)
