@@ -5,8 +5,6 @@ genNum = 40
 
 domain = "@email.com"
 
-email = ""
-
 firstname = []
 firstname_txt = open('C:/Users/vwimmer/Documents/Git/Tests/firstnames.txt', 'r')
 for firstnames in firstname_txt:
@@ -22,6 +20,7 @@ for lastnames in lastname_txt:
 lastname_txt.close()
 
 gN = 0
+email = ""
 
 while gN in range(genNum):
 	x = random.randint(0, (len(firstname) - 1))
