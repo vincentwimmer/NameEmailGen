@@ -5,6 +5,8 @@ genNum = 40
 
 domain = "@email.com"
 
+email = ""
+
 firstname = []
 firstname_txt = open('C:/Users/vwimmer/Documents/Git/Tests/firstnames.txt', 'r')
 for firstnames in firstname_txt:
@@ -19,17 +21,42 @@ for lastnames in lastname_txt:
 	lastname.append(lastnames)
 lastname_txt.close()
 
+adjective = []
+adjective_txt = open('C:/Users/vwimmer/Documents/Git/Tests/adjectives.txt', 'r')
+for adjectives in adjective_txt:
+	adjectives = adjectives.strip('\n')
+	adjective.append(adjectives)
+adjective_txt.close()
+
+noun = []
+noun_txt = open('C:/Users/vwimmer/Documents/Git/Tests/nouns.txt', 'r')
+for nouns in noun_txt:
+	nouns = nouns.strip('\n')
+	noun.append(nouns)
+noun_txt.close()
+
 gN = 0
-email = ""
 
 while gN in range(genNum):
-	x = random.randint(0, (len(firstname) - 1))
-	fn = firstname[x]
+	f = random.randint(0, (len(firstname) - 1))
+	fn = firstname[f]
 
-	y = random.randint(0, (len(lastname) - 1))
-	ln = lastname[y]
+	l = random.randint(0, (len(lastname) - 1))
+	ln = lastname[l]
 
-	z = random.randint(0, 9)
+	a1 = random.randint(0, (len(adjective) - 1))
+	adj1 = adjective[a1]
+
+	a2 = random.randint(0, (len(adjective) - 1))
+	adj2 = adjective[a2]
+
+	n1 = random.randint(0, (len(noun) - 1))
+	noun1 = noun[n1]
+
+	n2 = random.randint(0, (len(noun) - 1))
+	noun2 = noun[n2]
+
+	z = random.randint(0, 14)
 
 	year = random.randint(1969, 1994)
 
@@ -64,6 +91,24 @@ while gN in range(genNum):
 
 	if z == 9:
 		email = str(fn[0] + fn[1] + fn[2] + ln[0] + str(num) + domain).lower()
+
+	if z == 10:
+		email = str(adj1 + fn + str(num) + domain).lower()
+
+	if z == 11:
+		email = str(adj1 + fn + str(year) + domain).lower()
+
+	if z == 12:
+		email = str(adj1 + noun1 + noun2 + domain).lower()
+
+	if z == 13:
+		email = str(adj1 + noun1 + str(num) + adj2 + noun2 + domain).lower()
+
+	if z == 14:
+		email = str(fn + noun2 + str(num) + domain).lower()
+
+	if z == 13:
+		email = str(adj1 + noun1 + adj2 + noun2 + str(num) + domain).lower()
 
 	print(fn,ln)
 	print(email)
